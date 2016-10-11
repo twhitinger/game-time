@@ -1,3 +1,4 @@
+require('./ball-test');
 const assert = require('chai').assert;
 
 describe('our test bundle', function() {
