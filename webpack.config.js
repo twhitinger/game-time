@@ -1,4 +1,4 @@
-const path = require('path');
+require('path');
 
 module.exports = {
   entry: {
