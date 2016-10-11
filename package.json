@@ -20,17 +20,17 @@
   "homepage": "https://github.com/turingschool-examples/game-time-starter-kit",
   "devDependencies": {
     "babel": "^6.5.2",
-    "babel-core": "^6.11.4",
-    "babel-loader": "^6.2.4",
-    "chai": "^3.2.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
-    "mocha": "^2.2.5",
-    "mocha-loader": "^0.7.1",
+    "mocha": "^3.1.2",
+    "mocha-loader": "^1.0.0",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.2.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.10.1",
+    "webpack": "^1.13.2",
     "webpack-dev-server": "^1.10.1"
   }
 }
