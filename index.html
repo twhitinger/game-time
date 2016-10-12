@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<style>
+#myProgress {
+  position: relative;
+  width: 1%;
+  height: 100px;
+  background-color: #4CAF50;
+}
+
+#myBar {
+  position: absolute;
+  width: 100%;
+  height: 1%;
+  background-color:   #ddd
+
+}
+</style>
 <head>
   <meta charset="utf-8">
   <title>Game Time</title>
@@ -7,8 +23,8 @@
 <body>
   <section id="game-area">
     <canvas id="game-canvas" width="640" height="360" style="border:1px solid #000000">
-    If you can see this message, your browser does not support html canvas and needs to be updated. Sorry!
-  </canvas>
+      If you can see this message, your browser does not support html canvas and needs to be updated. Sorry!
+    </canvas>
   </section>
   <script src="main.bundle.js"></script>
 </body>
