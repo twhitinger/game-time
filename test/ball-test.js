@@ -13,14 +13,28 @@ describe('Ball', function() {
   });
 
   context('movement', function() {
-    let ball = new Ball();
+    let ball = new Ball(100, 100);
     it('should have the ability to move', function() {
       assert.isFunction(ball.move, "move is NOT a function");
     });
-    it('should move to a new location', function() {
-      ball.move({v: [2, 2], r: 1});
-      assert.notEqual(ball.x, 50);
-      assert.notEqual(ball.y, 50);
+    it('should move in a horizontal vector', function() {
+      ball.move(Math.PI);
+      assert.equal(ball.y, 100);
+      assert.notEqual(ball.x, 100);
+    });
+    it('should move in a vertical vector', function() {
+      ball.x = 100;
+      ball.move(Math.PI/2);
+      assert.equal(ball.x, 100);
+      assert.notEqual(ball.y, 100);
+    });
+    it('should move in x,y-planes equally for a diagonal PI/4 radian vector', function() {
+      let xInit = 100;
+      let yInit = 100;
+      ball.x = xInit;
+      ball.y = yInit;
+      ball.move(Math.PI/4);
+      assert.equal(((ball.x - xInit) - (yInit - ball.y)), 0);
     });
   });
 });
