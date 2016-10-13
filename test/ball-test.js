@@ -34,7 +34,7 @@ describe('Ball', function() {
       ball.x = xInit;
       ball.y = yInit;
       ball.move(Math.PI/4);
-      assert.equal(((ball.x - xInit) - (yInit - ball.y)), 0);
+      assert.equal(((ball.x - xInit) - (ball.y - yInit)), 0);
     });
   });
 });
