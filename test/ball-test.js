@@ -12,19 +12,21 @@ describe('Ball', function() {
     });
   });
 
-  context('movement', function() {
+  context('location updating', function() {
     let ball = new Ball(100, 100);
     it('should have the ability to move', function() {
-      assert.isFunction(ball.move, "move is NOT a function");
+      assert.isFunction(ball.update, "move is NOT a function");
     });
     it('should move in a horizontal vector', function() {
-      ball.move(Math.PI);
+      ball.hit(Math.PI, 5);
+      ball.update();
       assert.equal(ball.y, 100);
       assert.notEqual(ball.x, 100);
     });
     it('should move in a vertical vector', function() {
       ball.x = 100;
-      ball.move(Math.PI/2);
+      ball.hit(Math.PI/2, 5);
+      ball.update();
       assert.equal(ball.x, 100);
       assert.notEqual(ball.y, 100);
     });
@@ -33,8 +35,15 @@ describe('Ball', function() {
       let yInit = 100;
       ball.x = xInit;
       ball.y = yInit;
-      ball.move(Math.PI/4);
+      ball.hit(Math.PI/4, 5);
+      ball.update();
       assert.equal(((ball.x - xInit) - (ball.y - yInit)), 0);
+    });
+    it('should deflect in x-direction when it hits a vertical surface', function() {
+
+    });
+    it('should deflect in y-direction when it hits a horizontal surface', function() {
+
     });
   });
 });
