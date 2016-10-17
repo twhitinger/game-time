@@ -39,5 +39,11 @@ describe('Ball', function() {
       ball.update();
       assert.equal(((ball.x - xInit) - (ball.y - yInit)), 0);
     });
+    it('should deflect in x-direction when it hits a vertical surface', function() {
+
+    });
+    it('should deflect in y-direction when it hits a horizontal surface', function() {
+
+    });
   });
 });
