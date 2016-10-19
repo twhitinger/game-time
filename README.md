@@ -1,31 +1,13 @@
-# Game Time Starter Kit
+# Lyger Woods 2017
 
-To install the dependencies:
+## Description
 
-```
-npm install
-```
+Lyger Woods 2017 is a miniature golf game written in JavaScript, and utilizing the HTML canvas for all gameplay. The game can be played [here](https://concach.github.io/game-time).
 
-To fire up a development server:
+## Playing instructions
 
-```
-npm start
-```
+Within a round, the user input is accepted by press-hold-release of the space bar. While the space bar is pressed down, the player can see the current input - either a power meter, or a direction pointer. The power meter affects how hard the ball is struck, and the direction meter gives input for the direction of the hit.
 
-Once the server is running, you can visit:
+One the player makes the ball in the hole, a new hole is displayed. Once the player has played all the holes, a final score is displayed.
 
-* `http://localhost:8080/webpack-dev-server/` to run your application.
-* `http://localhost:8080/webpack-dev-server/test.html` to run your test suite in the browser.
-
-To build the static files:
-
-```js
-npm run build
-```
-
-
-To run tests in Node:
-
-```js
-npm test
-```
+This game was created from a fork of the [Gametime Starter Kit](https://github.com/turingschool-examples/game-time-starter-kit) by [Chris Concannon](https://www.github.com/concach) and [Trent Whitinger](https://www.github.com/twhitinger).
