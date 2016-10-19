@@ -12,17 +12,24 @@ describe('Ball', function() {
     });
   });
 
-  context('location updating', function() {
+  context('with available functions', function() {
     let ball = new Ball(100, 100);
-    it('should have the ability to move', function() {
-      assert.isFunction(ball.update, "move is NOT a function");
+
+    it('should have the ability to update itself', function() {
+      assert.isFunction(ball.update, "update is NOT a function");
     });
+
+    it('should have the ability to draw itself', function() {
+      assert.isFunction(ball.draw, "draw is NOT a function");
+    });
+
     it('should move in a horizontal vector', function() {
       ball.hit(Math.PI, 5);
       ball.update();
       assert.equal(ball.y, 100);
       assert.notEqual(ball.x, 100);
     });
+
     it('should move in a vertical vector', function() {
       ball.x = 100;
       ball.hit(Math.PI/2, 5);
@@ -30,6 +37,7 @@ describe('Ball', function() {
       assert.equal(ball.x, 100);
       assert.notEqual(ball.y, 100);
     });
+
     it('should move in x,y-planes equally for a diagonal PI/4 radian vector', function() {
       let xInit = 100;
       let yInit = 100;
@@ -39,11 +47,21 @@ describe('Ball', function() {
       ball.update();
       assert.equal(((ball.x - xInit) - (ball.y - yInit)), 0);
     });
-    it('should deflect in x-direction when it hits a vertical surface', function() {
 
+    it('should deflect in x-direction', function() {
+      let ball = new Ball({});
+      ball.direction = 0;
+      ball.xDeflect();
+      assert.notEqual(ball.direction, 0);
+      assert.equal(ball.direction, Math.PI);
     });
-    it('should deflect in y-direction when it hits a horizontal surface', function() {
 
+    it('should deflect in y-direction', function() {
+      let ball = new Ball({});
+      ball.direction = Math.PI/2;
+      ball.yDeflect();
+      assert.notEqual(ball.direction, Math.PI/2);
+      assert.equal(ball.direction, -Math.PI/2);
     });
   });
 });
