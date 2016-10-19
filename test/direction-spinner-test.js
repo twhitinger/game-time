@@ -8,7 +8,7 @@ describe('DirectionSpinner', function() {
     let directionSpinner = new DirectionSpinner();
 
     it('should be an object', function() {
-      assert.isObject(directionSpinner);
+      assert.isObject(directionSpinner, "directionSpinner is not an object!");
     });
   });
 
