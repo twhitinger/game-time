@@ -1,3 +1,4 @@
+require('./index-test');
 require('./play-hole-test');
 require('./stroke-test');
 require('./ball-test');
