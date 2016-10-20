@@ -1,5 +1,6 @@
-require('./ball-test');
+require('./play-hole-test');
 require('./stroke-test');
+require('./ball-test');
 require('./direction-spinner-test');
 require('./power-bar-test');
 require('./hole-test');
