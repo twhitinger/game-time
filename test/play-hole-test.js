@@ -6,7 +6,8 @@ const PlayHole = require('../lib/play-hole');
 describe("PlayHole", function() {
   let gameStub = {
     canvas: {width: 100, height: 100},
-    applauseSound: {load: function(){}, play: function(){}}
+    applauseSound: {load: function(){}, play: function(){}},
+    puttSound: {load: function(){}, play: function(){}}
   };
   context("with default attributes", function() {
     let playHole = new PlayHole(gameStub, 1);
