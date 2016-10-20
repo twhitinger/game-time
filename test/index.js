@@ -1,4 +1,5 @@
-require('./index-test');
+require('./menu-test');
+require('./play-golf-test');
 require('./play-hole-test');
 require('./stroke-test');
 require('./ball-test');
